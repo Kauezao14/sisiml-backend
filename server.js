@@ -41,11 +41,14 @@ io.on('connection', socket => {
     })
 })
 
+app.get("/", (req, res) => {
+  res.send("API online ✅ Railway OK");
+});
+
+app.get("/health", (req, res) => res.send({ ok: true, ts: Date.now() }));
+
 server.listen(port, () => {
     console.log("\n");
     console.log(`Servidor rodando na porta: ${port}`);
     console.log("\n");
 });
-app.get('/health', (req, res) => res.send({ ok: true, ts: Date.now() }));
-
-
