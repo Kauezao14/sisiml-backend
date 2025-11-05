@@ -1,0 +1,8 @@
+﻿[build]
+builder = "NIXPACKS"
+
+[nixpacks]
+node_pm = "npm"
+
+[deploy]
+startCommand = "npm start"
